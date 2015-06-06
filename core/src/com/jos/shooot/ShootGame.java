@@ -52,8 +52,12 @@ public class ShootGame extends ApplicationAdapter {
       }
     }
 
-    if (Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
+    if (Gdx.input.isKeyPressed(Input.Keys.DPAD_UP)) {
       dudeY += Gdx.graphics.getDeltaTime() * dudeSpeed * 10;
+    }
+
+    if (Gdx.input.isKeyPressed(Input.Keys.DPAD_DOWN)) {
+      dudeY -= Gdx.graphics.getDeltaTime() * dudeSpeed * 10;
     }
 
     batch.begin();
